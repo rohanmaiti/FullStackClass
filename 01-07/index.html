@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./CSS/index.css">
+</head>
+<body>
+    <nav>
+        <img src="https://1000logos.net/wp-content/uploads/2019/12/Citroen-Logo.png" alt="" id="logo">
+        <a href="./index.html">Home</a>
+        <a href="/about.html">About</a>
+        <a href="/contact.html">Contact</a>
+        <a href="/signup.html"><button>Register</button></a>
+    </nav>
+    <div id="slidingImage">
+        <img src="https://images.hdqwalls.com/wallpapers/mountain-scenery-morning-sun-rays-4k-kf.jpg" alt="" class="slider">
+    </div>
+    <h2 id="serviceHeading">Services</h2>
+    <div class="serviceContainer">
+        <div class="service">
+            <img src="https://cohesiumresearch.com/wp-content/uploads/2014/06/diagram1.jpg" alt="" class="serviceImages"> <br> <br>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius, ullam.</div>
+        <div class="service">
+            <img src="https://cohesiumresearch.com/wp-content/uploads/2014/06/diagram1.jpg" alt="" class="serviceImages"> <br> <br>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, cum?</div>
+        <div class="service">
+            <img src="https://cohesiumresearch.com/wp-content/uploads/2014/06/diagram1.jpg" alt="" class="serviceImages"> <br> <br>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, ad?</div>
+    </div>
+    <h2 id="about" >About Us</h2>
+    <div id="aboutus">
+        <img src="https://drrrhyhe9lfip.cloudfront.net/ScriptMedia/54/about_us_thumb01png-514.png" alt="" id="aboutImage">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores quo, aspernatur veritatis architecto corporis, blanditiis molestiae natus debitis, voluptatum dolor commodi dignissimos voluptatibus cupiditate. Molestiae dolores, ab magni nemo neque impedit cumque nihil possimus? Dicta mollitia atque ex, suscipit adipisci, maiores perferendis eligendi distinctio odio impedit accusantium aliquam magni vel.</p>
+    </div>
+    <br>
+    <hr>
+    <footer id="footer">
+        <div class="footerDiv" id="footerAbout">
+            <h3>About us</h3>
+            <li>Lorem ipsum dolor sit.</li>
+            <li>Lorem ipsum dolor sit.</li>
+            <li>Lorem ipsum dolor sit.</li>
+
+        </div>
+        <div class="footerDiv" id="footerSocial">
+            <h3>Contact us</h3>
+
+            <li>Lorem ipsum dolor sit.</li>
+            <li>Lorem ipsum dolor sit.</li>
+            <li>Lorem ipsum dolor sit.</li>
+          
+        </div>
+        <div class="footerDiv" id="footerAddress">
+            <h3>Social Media</h3>
+            <a href="">facebook</a>
+            <a href="">Instagram</a>
+            <a href="">Linkedin</a>
+        </div>
+
+            
+    </footer>
+
+    <script>
+        let c = 0
+        setInterval(()=>{
+            c++;
+            if(c%2 == 0)
+            {
+                src = "/web_images/senery.jpg"
+            }
+            else{
+                src = "https://images.hdqwalls.com/wallpapers/mountain-scenery-morning-sun-rays-4k-kf.jpg"
+            }
+            document.querySelector(".slider").src = src;
+
+        },2000)
+    </script>
+</body>
+</html>

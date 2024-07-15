@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        form {
+            background-color: #ffffff;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="file"] {
+            width: 90%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button[type="submit"] {
+            background-color: #007bff;
+            color: #ffffff;
+            border: none;
+            border-radius: 4px;
+            padding: 10px 20px;
+            cursor: pointer;
+            display: block;
+            margin: auto;
+        }
+
+        button[type="submit"]:hover {
+            
+            background-color: #0056b3;
+        }
+
+        a {
+            text-decoration: none;
+            color: #007bff;
+        }
+        h3{
+            text-align: center;
+        }
+        label{
+            font-size: 12px;
+            padding-left: 14px;
+        }
+        a{
+            font-size: 13px;
+        }
+    </style>
+</head>
+<body>
+    <form action="/signup" enctype="multipart/form-data" method="post">
+        <h3>Create Your Account</h3>
+        <input type="text" name="uname" id="uname" placeholder="Enter username" required > <br>
+        <input type="email" name="email" id="email" placeholder="Enter email id" required > <br>
+        <input type="password" name="password" id="password" placeholder="Enter Password" required > <br>
+        <label for="img" class="visually-hidden">Choose Your Profile Photo</label> <input type="file" name="img" id="img" placeholder="choose Prifile picture"> <br>
+        <button type="submit">create account</button>
+        <a href="/">Already have account? <br> click here to login</a>
+    </form>
+</body>
+</html>

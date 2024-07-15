@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/CSS/home.css">
+</head>
+<body>
+    <h1 id="heading">Welcome to E-commarce Website</h1>
+    <input type="text" name="product" id="search" placeholder=" Search your product">
+    <br>
+    <button id="btn">Search</button>
+    <nav>
+        <a href="./index.html">Home</a>
+        <a href="">Cart</a>
+        <a href="">Favorite</a>
+       
+    </nav>
+    <div class="products">
+
+    </div>
+    
+</body>
+<script>
+    (async function getProducts(){
+        let res = await fetch('https://dummyjson.com/products');
+        let data =await res.json();
+        // console.log(data)
+        let arrayOfObj = data.products;
+        // console.log(arrayOfObj)
+        arrayOfObj.forEach((obj)=>{
+
+        let div = document.createElement('div');
+        div.setAttribute('class','productDiv');
+        document.querySelector('.products').append(div);
+        let span = document.createElement('span');
+        span.innerHTML = obj.title;
+        let img = document.createElement('img');
+        img.setAttribute('src',obj.images[0]);
+        div.append(img,span)
+        let addCart = document.createElement('button');
+        let byeNow = document.createElement('button');
+        addCart.innerHTML = "Add to cart"
+        byeNow.innerHTML = "Bye Now"
+        addCart.setAttribute('class',"buyButton");
+        // byeNow.setAttribute('class',"buyButton");
+        div.append(addCart,byeNow)
+        })
+    })()
+
+    // setInterval(()=>{
+        
+
+        // document.querySelectorAll('.buyButton').forEach((x)=>{
+            // console.log(x);
+        // ele.addEventListener('click',(e)=>{
+        //  console.log(e.parentNode);
+        // })
+    // })
+    // },1)
+    
+    document.querySelector('#btn').addEventListener('click',async (e)=>{
+        console.log("function started");
+            let product = {val:document.querySelector('#search').value.trim()};
+            document.querySelector('#search').value = " ";
+            let res = await fetch('/search',{
+            method:"POST",
+            headers:{
+                'Content-Type':'application/json'
+            },
+            body:JSON.stringify(product)
+            });
+            let data =await res.json();
+           
+            // displayProduct(data);
+            console.log(data);
+
+   
+    })
+    function displayProduct(data){
+            if(data.massage == "Product Not Found"){
+                document.querySelector('.products').innerHTML = "<h1>Sorry Product Not Found</h1>"
+             }
+             else{
+                console.log("data found")
+        document.querySelector('.products').innerHTML = "";
+        let div = document.createElement('div');
+        div.setAttribute('class','productDiv');
+        document.querySelector('.products').append(div);
+        let span = document.createElement('span');
+        span.innerHTML = data.title;
+        let img = document.createElement('img');
+        img.setAttribute('src',data.images[0]);
+        div.append(img,span)
+             }
+    }
+
+    
+    // document.querySelector()
+</script>
+</html>

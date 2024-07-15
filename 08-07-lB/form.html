@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 400px;
+            margin: auto;
+            height: 300px;
+            border: 1px solid black;
+            border-radius: 3px;
+            background-color: rgb(156, 157, 157);
+            border-radius: 10px;
+           
+        }
+        .form{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* align-content: center; */
+        }
+        .container form{
+            padding: 20px;
+        }
+        button{
+            padding: 4px;
+            width: 50px;
+            border-radius: 5px;
+            margin-top: 20px;
+
+        }
+       
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form class="form">
+            <label for="title">Add review</label>  <textarea  required name="title" id="title" cols="30" rows="10" ></textarea>
+            <label for="img">Choose Img :</label> <input required type="file" name="img" id="img" placeholder="Enter file"> 
+            <button type="submit" class="addpost">add</button>
+            <a href="./index.html"><button type="button">back</button></a>
+        </form>
+    </div>
+  
+   
+</body>
+<script src="./js/form.js"></script>
+</html>
