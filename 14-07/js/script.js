@@ -108,7 +108,6 @@ function removeElement(input, element) {
 //check whether element is available or not
 //remove all the occurrences of element
     let boolean = input.filter(ele=>ele!=element);
-
 	return boolean;
 }
 
