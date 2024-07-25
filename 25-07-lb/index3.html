@@ -5,94 +5,143 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        .display{
-            width: 200px;
-            height: 200px;
-            border: 1px solid black;
-            margin: auto;
+        .div{
+            /* border:1px solid black; */
+
         }
-        .timer{
-            width: 150px;
-            height: 150px;
-            border: 1px solid black;
-            margin: auto;
-            margin-top: 24px;
+        .container{
+            display: grid;
+            grid-template: 20px 20px 20px 20px 20px 20px / 20px 20px 20px 20px 20px 20px;
         }
-        .horizontal-bar{
-            height: 23px;
-            border:1px solid red;
+        .div1{
+        grid-area: 1/1/7/2;
         }
-        .varticle-bar.two{
-            width: 23px;
-            float: right;
-            position: relative;
-            top: -200px;
-            border:1px solid red;
+        .div2{
+            grid-area:6/2/7/7;
         }
-        .varticle-bar.four{
-            width: 23px;
-            float: left;
-            position: relative;
-            top: -200px;
-            border:1px solid red;
+        .div3{
+            grid-area:6/6/1/7;
         }
-        .three{
-            position: relative;
-            top:-200px;
+        .div4{
+            grid-area:1/6/2/2;
         }
-        
-        .divThree{
+        .div5{
+            grid-area:2/2/6/6; 
+        }
+        #childDiv-2{
+            width: 0;
+            height:20px;
+        }
+        #childDiv-3{
+            width: 20;
+            background-color: greenyellow;
+        }
+        #childDiv-1,#childDiv-2,#childDiv-3,#childDiv-4{
+            background-color: greenyellow;
+        }
+        .div3{
+            display: flex;
+            flex-direction: column-reverse;
+        }
+        .div4{
             display: flex;
             flex-direction: row-reverse;
         }
-        .bar{
-            background-color: greenyellow;
+        .div{
+            border-top-left-radius: 50%;
+            border-top-right-radius: 50%;
         }
     </style>
 </head>
 <body>
-    <div class="display">
-     <div class="timer"></div>
-   
-        <div class="bar  horizontal-bar one">1</div>
-        <div class=" divThree">
-            <div class="bar horizontal-bar three">3</div>
-        </div>
-  
-     <div class="varticle">
-        <div class="bar varticle-bar two">2</div>
-        <div class="bar varticle-bar four">4</div>
-     </div>
+    <div class="container">
+       <div class="div div1"> <div id="childDiv-1"></div> </div>
+       <div class="div div2"> <div id="childDiv-2" ></div> </div>
+       <div class="div div3"> <div id="childDiv-3" ></div> </div>
+       <div class="div div4"> <div id="childDiv-4" ></div> </div>
+       <div class="div div5"> <div id="childDiv-5" ></div> </div>
     </div>
 
-
     <script>
-       let oneHorizontal = document.querySelector('.one')
-       let threeHorizontalRevaerse =  document.querySelector('.three')
-       let twoVerticle = document.querySelector('.two')
-       let fourVerticle =  document.querySelector('.four');
+        let div1 = document.querySelector(".div1");
+        let div2 = document.querySelector(".div2");
+        let div3 = document.querySelector(".div3");
+        let div4 = document.querySelector(".div4");
+        let div5 = document.querySelector(".div5");
 
-       oneWidth = 0
-       let id1 = setInterval(()=>{
-        oneWidth++;
-        oneHorizontal.style = `width:${oneWidth}px`
-        if(oneWidth == 175)
-       {
-        clearInterval(id1)
+        let childDiv_1 = document.querySelector("#childDiv-1");
+        let childDiv_2 = document.querySelector("#childDiv-2");
+        let childDiv_3 = document.querySelector("#childDiv-3");
+        let childDiv_4 = document.querySelector("#childDiv-4");
+        let childDiv_5 = document.querySelector("#childDiv-5");
+   
+        console.log(childDiv_4.offsetHeight);
+        console.log(childDiv_4.offsetWidth);
+        
+       function one(){
+        let height1 = 0;
+       let id1 =  setInterval(()=>{
+        height1++;
+        if(height1 == 100){
+        clearInterval(id1);
+        two();
+        }
+        childDiv_1.style = `height : ${height1}%;`;
+        },10)
        }
-       },25)
+        
+       function two(){
+        let width2 = 0;
+        let id2 =  setInterval(()=>{
+            width2++;
+        if(width2 == 100)
+        {
+        clearInterval(id2);
+        three();
+        }
+        childDiv_2.style = `width : ${width2}%;`;
+        },10)
+       }
 
-    //    if(oneWidth >=175){
-       twoHeight = 175;
-       let id2 = setInterval(()=>{
-        twoHeight--;
-        oneHorizontal.style = `height:${twoHeight}px`
-        if(twoHeight == 0)
-       {
-        clearInterval(id2)
+
+
+       function three(){
+        let height3 = 0;
+        let id3 =  setInterval(()=>{
+            height3++;
+        if(height3 == 100)
+        {
+            clearInterval(id3);
+            four();
+        }
+        
+        childDiv_3.style = `height : ${height3}%;`;
+        },10)
        }
-       },25)
-    //    }
+
+       function four(){
+        let width4 = 0;
+        let id4 =  setInterval(()=>{
+        width4++;
+        if(width4 == 100)
+        {
+            clearInterval(id4);
+        }
+        childDiv_4.style = `width : ${width4}%;`;
+        },10)
+       }
+       
+       one();
+       
+
+
+        
+
+        
+
+         
+
+
     </script>
 </body>
 </html>
