@@ -1,0 +1,117 @@
+
+        body{
+            background-color: rgb(154, 199, 244);
+        }
+        .container{
+            display: block;
+            margin: auto;
+            height:470px;
+            width:260px;
+            /* border:2px solid black; */
+            border-radius: 5px;
+            background-color: rgba(44, 17, 8, 0.762);
+            
+        }
+        .display{
+            position: relative;
+            top: 5px;
+            border-radius: 2px;
+            width: 210px;
+            height: 210px;
+            border:10px solid grey;
+            background-color: #ffffff;
+            display: block;
+            margin: auto;
+            text-align: center;
+            color: rgb(0, 0, 0);
+            display: flex;
+            justify-content: center;
+            position: relative;
+            top: 15px;
+        }
+        .comment{
+            width: 200px;
+            height: 50px;
+            border:none;
+            border-bottom: 2px dotted white;
+            position: relative;
+            top: 20px;
+            margin: auto;
+            /* background-color: #ffffff; */
+            color:#ffff;
+
+        }
+        .time{
+            display: flex;
+            justify-content: center;
+            align-items: baseline;
+            align-content: center;
+        }
+        #session{
+            /* width: 100px;
+            height: 40px; */
+            /* border:1px solid black; */
+            
+        }
+        .box{
+            /* border: 1px solid black; */
+            width: 100px;
+            text-align: center;
+            height: 90px;
+        }
+        .Time{
+            font-size: 17px;
+            position: relative;
+            top:10px;
+            color:#ffffff;
+        }
+        .changeTime{
+            position: relative;
+            top: -40px;
+        }
+        .btn{
+            position: relative;
+            top:-68px;
+            width: 29px;
+            background-color: rgb(48, 48, 48);
+            color:#ffff;
+            border-radius: 2px;
+            box-shadow: none;
+        }
+        .pauseReset{
+            display: flex;
+            justify-content: space-evenly;
+            border: none;
+            border-bottom:2px dotted rgb(255, 255, 255);
+           
+            /* width: 200px; */ 
+        }
+        .prBtn{
+            position: relative;
+            top:50px;
+            width: 65px;
+            height: 30px;
+            background-color: rgb(48, 48, 48);
+            color:#ffff;
+            border-radius:2px;
+
+        }
+        .hr{
+            position: relative;
+            top:px;
+        }
+        .display p{
+            /* text-align: center; */
+            position: relative;
+            top: 40px;
+            font-size: 30px;
+            letter-spacing: 0.1em;
+    
+        }
+        .c2{
+            font-size: 20px;
+            color: rgb(255, 119, 0)
+        }
+        .c1{
+            font-size: 20px;color:rgb(16, 191, 51)
+        }

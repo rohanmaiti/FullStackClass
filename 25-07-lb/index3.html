@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .display{
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+            margin: auto;
+        }
+        .timer{
+            width: 150px;
+            height: 150px;
+            border: 1px solid black;
+            margin: auto;
+            margin-top: 24px;
+        }
+        .horizontal-bar{
+            height: 23px;
+            border:1px solid red;
+        }
+        .varticle-bar.two{
+            width: 23px;
+            float: right;
+            position: relative;
+            top: -200px;
+            border:1px solid red;
+        }
+        .varticle-bar.four{
+            width: 23px;
+            float: left;
+            position: relative;
+            top: -200px;
+            border:1px solid red;
+        }
+        .three{
+            position: relative;
+            top:-200px;
+        }
+        
+        .divThree{
+            display: flex;
+            flex-direction: row-reverse;
+        }
+        .bar{
+            background-color: greenyellow;
+        }
+    </style>
+</head>
+<body>
+    <div class="display">
+     <div class="timer"></div>
+   
+        <div class="bar  horizontal-bar one">1</div>
+        <div class=" divThree">
+            <div class="bar horizontal-bar three">3</div>
+        </div>
+  
+     <div class="varticle">
+        <div class="bar varticle-bar two">2</div>
+        <div class="bar varticle-bar four">4</div>
+     </div>
+    </div>
+
+
+    <script>
+       let oneHorizontal = document.querySelector('.one')
+       let threeHorizontalRevaerse =  document.querySelector('.three')
+       let twoVerticle = document.querySelector('.two')
+       let fourVerticle =  document.querySelector('.four');
+
+       oneWidth = 0
+       let id1 = setInterval(()=>{
+        oneWidth++;
+        oneHorizontal.style = `width:${oneWidth}px`
+        if(oneWidth == 175)
+       {
+        clearInterval(id1)
+       }
+       },25)
+
+    //    if(oneWidth >=175){
+       twoHeight = 175;
+       let id2 = setInterval(()=>{
+        twoHeight--;
+        oneHorizontal.style = `height:${twoHeight}px`
+        if(twoHeight == 0)
+       {
+        clearInterval(id2)
+       }
+       },25)
+    //    }
+    </script>
+</body>
+</html>

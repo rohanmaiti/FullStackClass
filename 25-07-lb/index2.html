@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="container">
+       <div class="display"> <p id="min">00</p><p>:</p><p id="sec">00</p> </div>
+       <div class="comment" display="none"></div>
+       <div class="time">
+           <div id="session" class="box">
+               <p  class="Time">session time</p> <br>
+               <p class="changeTime c1">20 min</p> <br>
+               <button class="btn"  id="sm">-</button>
+               <button class="btn"  id="sp">+</button>
+           </div>
+           <div id="break" class="box">
+               <p class="Time">break time</p> <br>
+               <p class="changeTime c2" >5 min</p> <br>
+               <button class="btn" id="bm">-</button>
+               <button class="btn" id="bp">+</button>
+           </div>
+       </div>
+       <div class="pauseReset">
+           <button id="pauseBtn" name="true" class="prBtn" >Start</button>
+           <button id="resetBtn" class="prBtn" >Reset</button>
+       </div>
+     </div>
+   <script src="./js/script.js" ></script>
+</body>
+</html>
