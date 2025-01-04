@@ -7,8 +7,7 @@
 
 // a = "text";
 // console.log(a);
-// console.log(typeof a);
-
+// console.log(typeof a);
 
 //let vs var
 console.log(username);  // undefined;
